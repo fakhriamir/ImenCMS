@@ -1,0 +1,391 @@
+﻿@font-face{font-family:"KoodakFont";src:url(/style/BYekan.eot?#) format("eot"), url(/style/BYekan.woff) format("woff"), url(/style/BYekan.ttf) format("truetype");}@font-face{font-family:"ImenFont";src:url(/style/BYekan.eot?#) format("eot"), url(/style/BYekan.woff) format("woff"), url(/style/BYekan.ttf) format("truetype");}
+
+
+legend {
+	color: #05297b;
+	font-size: 14px;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-bottom: 3px;
+	padding-top: 3px;
+	border: 1px solid #848484;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.PageHeader {
+	height: 100px;
+	width: 100%;
+	/*background: url(/imgs/blue_header3.jpg);*/
+	background-repeat: repeat-x;
+	color: #fff;
+    background-color:#f1f1f1;
+}
+
+	.PageHeader a {
+		color: #fff;
+	}
+
+.error {
+	color: Red;
+}
+
+body {
+	direction: rtl;
+	margin: 0px;
+	font-family: tahoma;
+	font-size: 11px;
+	background-position: center;
+	/*background: #fff url('/Imgs/tile.png') repeat-x ;*/
+	background-color:#f1f1f1;
+	width:100%;
+}
+fieldset { border-radius:4px; border:1px solid #a8adbd;
+}
+legend { background-color:#0581bc;color:#fff; text-shadow:1px 0px 1px #ccc;
+}
+.TableColor {
+	padding: 0px;
+	background-color: #fff;
+	/*table-layout: fixed;*/
+}
+
+.RowHead, th {
+	font-size: 12px;
+	font-weight: bold;
+	/*background: blue url('/Imgs/HBG.jpg');*/
+    background-color:#ccc;
+    
+	height: 35px;
+	color: #1b3138;
+	text-align: center;
+	vertical-align: middle;
+}
+
+	.RowHead:hover {
+		
+	}
+
+.RowItem {
+	background: #fff;
+	vertical-align: middle;
+}
+
+.RowAlter {
+	background-color: #f1f1f1;
+	vertical-align: middle;
+}
+
+	.RowAlter:hover {
+		background-color: #ffe3a1 ;
+	}
+
+.RowItem:hover {
+	background-color: #ffe3a1;
+}
+
+.BigInput {
+	width: 500px;
+}
+
+label {
+	cursor: hand;
+}
+
+a {
+	text-decoration: none;
+	font-size: 11px;
+}
+
+span {
+	cursor: hand;
+}
+
+input.Ra {
+	border: 0px solid #fff8ed;
+	vertical-align: middle;
+	font-size: 10;
+	padding-top: 0px;
+	padding: 2px;
+	cursor: hand;
+	background-color: #fff8ed;
+	width: 10px;
+	margin: 5px;
+}
+
+select {
+	font-family: tahoma;
+	font-weight: bold;
+	font-size: 11px;
+	padding: 1px;
+	margin: 5px;
+	width: 200px;
+	padding-top: 0px;
+	height: 21px;
+	margin-right: 0px;
+}
+
+input[type=text], input[type=password] {
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px;
+	border: 1px solid #57c9ff;
+	vertical-align: middle;
+	font-family: tahoma;
+	font-size: 10pt;
+	padding-top: 0px;
+	background-color: #f9f9f9;
+	margin-right: 0px;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+    height:22px;
+    width:200px;
+}
+input[type=text]:focus, input[type=password]:focus {
+    border: 1px solid #ffae06;
+    background-color:#fff;
+    box-shadow:#c4c4c4 1px 1px inset;
+}
+input[type=submit], input[type=reset], input[type=button] {
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px;
+	border: 1px solid #06137a;
+	vertical-align: middle;
+	font-family: tahoma;
+	font-size: 10pt;
+	color: #ffffff;
+	padding-top: 0px;
+	padding-bottom: 3px;
+	background: #868b9c url('/Imgs/HBG.jpg') center;
+	margin: 5px;
+}
+    input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover {
+        background: #868b9c url('/Imgs/HBG_hover.jpg') center;
+        cursor:pointer;
+        border: 1px solid #104e6a;
+    }
+textarea {
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px;
+	font-family: tahoma;
+	font-weight: bold;
+	font-size: 11px;
+	margin: 5px;
+}
+
+#My {
+	width: 95%;
+	border: solid 1px #a8adbd;
+}
+
+#My td {
+		height: 20px;
+		border: solid 1px #a8adbd;
+	}
+
+img {
+	border-style: none;
+	border-color: inherit;
+	border-width: 0;
+}
+
+.NoBor {
+	border-style: none;
+	border-width: 0;
+}
+
+table {
+	/*border-collapse: separate;*/
+    border:1px solid #999;
+    box-shadow:2px 2px 2px #848484;
+	text-align: right;
+    border-radius:5px;
+	/*table-layout: fixed;*/
+}
+
+td {
+	font-family: tahoma;
+	font-size: 10pt;
+    padding:1px 4px;
+}
+
+.BTNImage {
+	background-image: url("/Imgs/LogBTN.jpg");
+	WIDTH: 45px;
+	border: none 0 red;
+	HEIGHT: 22px;
+}
+
+.bold {
+	font-family: Tahoma;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+.header {
+	border-bottom: solid 3px #e4e9ec;
+	background-color: #f8f8f8;
+}
+
+.BTNFloatLeft {
+	float: left;
+}
+#MyMenu-nav
+{
+    width: 300px;   
+    float:right;
+}
+.Myaccordion {
+	width: 250px;margin-top:0px;
+	border-bottom: solid 1px #c4c4c4;
+    font: 10pt tahoma;
+    text-align:right;
+}
+.Myaccordion h3 {
+     /*background : -moz-linear-gradient(center top , #059de4, #047fb9) repeat scroll 0 0 transparent;*/
+	background:  url(/Imgs/menu_tile.png) repeat-x #0581bc;
+	padding: 4px 15px;
+	margin: 0;
+	font:  10pt KoodakFont;
+	border: solid 1px #006a9b;
+	border-bottom: none;
+	cursor: pointer;
+    color:#fff;
+    vertical-align:middle;
+    height:30px;
+    
+}
+.Myaccordion h3:hover {
+    text-shadow:2px 2px 2px #333;
+    height:30px;
+}
+    .Myaccordion h3 img {
+        vertical-align:middle;padding-top:3px;padding-left:4px;
+    }
+.Myaccordion ul {
+	background: #f7f7f7;
+	margin: 0;
+	padding: 0px;
+	border-left: solid 1px #c4c4c4;
+	border-right: solid 1px #c4c4c4;
+    
+}
+.Myaccordion ul li
+    {
+        list-style-type: none;
+        padding:5px;
+        display:block ;
+    }
+.Myaccordion ul li:hover
+        {
+            background-color:#ffba27;
+        }
+.Myaccordion a
+    {
+        text-decoration: none;
+        color: #383838;
+        display:block ;
+        padding-right:30px;
+    }
+.Myaccordion a:hover
+    {
+        color: #fff;
+    }
+#menuAccess a {
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 1px 1px 0px #0B6D9A;
+    padding:0px 3px;
+}
+    #menuAccess a:hover {
+        border-radius:5px;
+        box-shadow:1px 1px 0px #888;
+        background-color:#1d5c79;
+        padding:0px 3px;
+    }
+
+#DateNow { border:1px solid #d0d0d0; box-shadow:2px 2px 2px #d9d9d9;float:right; border-radius:3px; width:200px; font:10pt KoodakFont; background:url(/Imgs/gr.png) repeat-x #fff;height:85px; padding-top:14px;margin-right:20px; color:#888;}
+#Elder { font:9pt KoodakFont;float:right; padding:4px;  width:260px; border-radius:3px; padding-top:8px;border:1px solid #d0d0d0; margin-top:30px; margin-right:20px;background:url(/Imgs/gr.png) repeat-x #fff;height:80px;}
+#IconToolbar {border:1px solid #d0d0d0; box-shadow:2px 2px 2px #d9d9d9; border-radius:3px; font:10pt KoodakFont; float:right; width:800px; background:url(/Imgs/gr.png) repeat-x #fff; height:90px; padding-top:10px;}
+
+#IconToolbar img {
+        width: 50px;
+        height: 50px;
+    }
+        #IconToolbar img:hover {
+            box-shadow:#d0d0d0 1px 1px;
+        }
+    #IconToolbar a {
+        text-decoration: none;font:  10pt KoodakFont; color:#0581bc;
+    }
+    #IconToolbar a:hover {
+        text-shadow:1px 1px 1px #ccc;color:#F89A1E;
+    }
+    #IconToolbar table {
+        border:0; box-shadow:none;
+    }
+    #IconToolbar td {
+        width:120px;text-align:center;
+    }
+#PageVisit {
+    background: url(/Imgs/gr.png) repeat-x #fff;
+    margin-top: 20px;margin-right:20px;width:270px;
+}
+    #PageVisit table {
+        border: 1px solid #d0d0d0;
+        width:270px;
+        box-shadow:none;
+        
+    }
+#SettingDiv ul {
+ text-align:right;
+}
+#SettingDiv li{float:right;width:175px; margin:2px 7px; color:#ffae06; list-style:square;}
+    #SettingDiv li a {font:10pt KoodakFont;padding:5px; color:#0581bc;}
+        #SettingDiv li a:hover {background-color:#006a9b;color:#fff; border-radius:8px;}
+#usermenu {
+    margin: 0;padding: 4px 5px;
+}
+    #usermenu img {
+        cursor: pointer;
+    }
+#usermenu li{float:right;list-style:none;position: relative;height:18px;
+}
+#usermenu li:hover > ul {
+    display: block;
+}
+/* level 2 list */
+#usermenu ul {
+    display: none;
+    margin: 0;
+    padding: 0;
+    width: 140px;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    border: solid 1px #b4b4b4;
+    border-radius:5px;
+    z-index: 100;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0, .3);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0, .3);
+    box-shadow: 0 1px 3px rgba(0,0,0, .3);
+    background-color:#fff;
+}
+    #usermenu ul li {
+        float: none;
+        margin: 0;
+     
+       display:block;
+       border-bottom:1px dotted #eee;
+       padding:2px;
+    }
+        #usermenu ul li a {
+            font:10pt tahoma;padding: 4px 11px;color:#006DB0;
+        }
+        #usermenu ul li a:hover {
+            color:#ffae06;
+        }
+
+
+

@@ -1,0 +1,184 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="NewsService.Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+	<title><%=GetGlobalResourceObject("resource", "PortalAdminTitle")%></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Language" content="fa" />
+	<link runat="server" id="PageCSS" href="" type="text/css" rel="stylesheet" />
+	<link rel="Stylesheet" href="/scripts/tstyles.css" type="text/css" />
+	<link id="SiteCSS" runat="server" rel="Stylesheet" type="text/css" />
+	<%--<script src="/Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>--%>
+	<%--<script src="/Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>--%>
+	<script src="/Scripts/jquery-1.8.1.min.js" type="text/javascript"></script>
+	<!--UFD-->
+	<%--<script src="/scripts/jquery.validate.js" type="text/javascript"></script>--%>
+	<link href="/Style/ufd-base.css" rel="stylesheet" type="text/css" />
+	<link href="/Style/udf/plain/plain.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" language="javascript" src="/Page.js"></script>
+	<script src="/Scripts/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+	<script src="/Scripts/jquery.ui.ufd.js" type="text/javascript"></script>
+	<!--END UFD-->
+	<!--Start Dialog-->
+	<script src="/Scripts/ui.core.js" type="text/javascript"></script>
+	<script src="/Scripts/ui.dialog.js" type="text/javascript"></script>
+	<script src="/Scripts/ui.draggable.js" type="text/javascript"></script>
+	<%--<link href="/Style/jquery-ui-1.7.2.custom.css" rel="stylesheet" type="text/css" />--%>
+	<link href="/Style/jquery-ui-1.10.3.custom.css" rel="stylesheet" type="text/css" />
+	<script src="/Scripts/jquery.alerts.js" type="text/javascript"></script>
+	<link href="/Style/jquery.alerts.css" rel="stylesheet" type="text/css" />
+	<!--END Dialog-->
+	<style type="text/css">
+		.ufd input,
+		.ufd button
+		{
+			position: relative;
+			float: <%=GetGlobalResourceObject("resource", "_Align")%>;
+		}
+	</style>
+	<script type="text/javascript">
+		if ($.browser.mozilla) {
+			$(document.documentElement).keyup(function (event) {
+				if (null != event.target.value) {
+					if (event.target.tagName == "INPUT")
+						event.target.value = event.target.value.replace("ی", "ي");
+				}
+			});
+		}
+		else {
+			$(document).keyup(function (event) {
+				if (null != event.srcElement.value) {
+					if (event.target.tagName == "INPUT")
+						event.srcElement.value = event.srcElement.value.replace("ی", "ي");
+				}
+			});
+		}
+		var HelpAdd = "<%=HelpAddress %>";
+        function ShowHelpPage() {
+        	if (HelpAdd == "")
+        		alert('<%=GetGlobalResourceObject("resource", "PageNotHelp")%>');
+		    else
+		    	window.open(HelpAdd, 'Help_comm', 'width=500px,height=530px,left=150,top=0,resizable=no,scrollbars=yes');
+		}
+		$(document).ready(function () {
+			//$("#aspnetForm").validate();
+			$('table.TableColor tr:even').addClass('RowItem');
+			$('table.TableColor tr:odd').addClass('RowAlter');
+			//$('div.DivColor div:even').addClass('RowItem');
+			//$('div.DivColor div:odd').addClass('RowAlter');
+		});
+		$(function () {
+			$("select").not(".NotSearch").ufd({ log: true });
+		});
+	</script>
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+	<form id="form1" runat="server" enctype="multipart/form-data">
+
+		<div style="width: 100%;">
+			<div style="height: 50px; width: 100%; background: #f1f1f1 url('/Imgs/tile.png') repeat-x;">
+				<div style="float: <%=GetGlobalResourceObject("resource", "_Align")%>; width: 250px;">
+					<div style="height: 90px; border-bottom: 2px solid #325773; background-color: #059DE4;">
+						<a href="/">
+							<img align="<%=GetGlobalResourceObject("resource", "_Align")%>" src="/Imgs/Imen_logo<%=Tools.Tools.LangSTR%>.png"></a>
+						<img align="<%=GetGlobalResourceObject("resource", "_Align")%>" src="/Imgs/Logo.gif" onerror="this.style.display='none'">
+					</div>
+					<div style="clear: both;"></div>
+					<div id="MyMenu-nav">
+						<div class="Myaccordion">
+							<%=MenuSTR%>
+						</div>
+					</div>
+				</div>
+				<div style="float: <%=GetGlobalResourceObject("resource", "_Align")%>; margin-<%=GetGlobalResourceObject("resource", "_Align")%>: 250px; position: absolute; width: 80%;">
+					<div style="height: 40px; padding-top: 8px;">
+						<div style="float: <%=GetGlobalResourceObject("resource", "_Align")%>; color: #fff; padding-top: 4px; font-size: 10pt; padding-<%=GetGlobalResourceObject("resource", "_Align")%>: 5px;">
+							<div style="background-color: #0b6d9a; border-radius: 5px; padding: 4px 4px; margin: 0px; float: <%=GetGlobalResourceObject("resource", "_Align")%>; text-align: center;"><%=ADAL.A_CheckData.GetUnitID()%>- <%=Tools.Tools.GetUnitName() %></div>
+							<div style="margin: 0px; float: <%=GetGlobalResourceObject("resource", "_Align")%>;">
+								<ul id="usermenu">
+									<li>
+										<img src="/Imgs/arrow_menu2.png" />&nbsp;<b><%=ADAL.A_CheckData.GetNameUser()%></b>
+										<ul>
+											<li><a href="#">IP:<%=Tools.Tools.GetUserIPAddress()%></a></li>
+											<li><a href="/changePass.aspx"><%=GetGlobalResourceObject("resource", "ChangePass")%></a></li>
+											<li><a href="/Default.aspx?ID=Exit"><%=GetGlobalResourceObject("resource", "Exit")%></a></li>
+											</ul>
+									</li>
+									<li>&nbsp;&nbsp;<%=GetGlobalResourceObject("resource", "Welcome")%>&nbsp;</li>
+									
+								</ul>
+
+							</div>
+						</div>
+
+						<div style="float:<%=GetGlobalResourceObject("resource", "_AlignRev")%>;" id="menuAccess">
+							<a href="/">
+								<img style="width: 28px;" src="/Imgs/home.png" alt="<%=GetGlobalResourceObject("resource", "DefaultPage")%>" title="<%=GetGlobalResourceObject("resource", "DefaultPage")%> " /></a>
+							<a href="/UserAdmin.aspx">
+								<img style="width: 28px" src="/Imgs/user_ico.png" alt="<%=GetGlobalResourceObject("resource", "UsersMng")%>" title="<%=GetGlobalResourceObject("resource", "UsersMng")%>" /></a>
+							<%--                    <a href="Contact.aspx">
+                        <img style="width: 28px" src="/Imgs/mobile.png" alt="<%=GetGlobalResourceObject("resource", "ContactUsPT")%>" title="<%=GetGlobalResourceObject("resource", "ContactUsPT")%>" /></a>--%>
+
+							<a href="#">
+								<img alt="<%=GetGlobalResourceObject("resource", "PageHelp")%>" onclick="ShowHelpPage()" title="<%=GetGlobalResourceObject("resource", "PageHelp")%>"
+									id="PageHelp" src="/Imgs/help_ico.png" style="width: 28px;" /></a>
+							<a href="/MetaKey.aspx">
+								<img style="width: 28px" src="/Imgs/Statistic.png" alt="<%=GetGlobalResourceObject("resource", "SEOPT")%>" title="<%=GetGlobalResourceObject("resource", "SEOPT")%>" /></a>
+							<a href="/UserMessage.aspx">
+								<img style="width: 28px" src="/Imgs/email1.png" alt="<%=GetGlobalResourceObject("resource", "UserMsg")%>" title="<%=GetGlobalResourceObject("resource", "UserMsg")%>" />
+								<div style="position: relative; float: <%=GetGlobalResourceObject("resource", "_Align")%>; margin-top: -5px; color: #fff"></div>
+							</a>
+
+							<a href="/Texts.aspx">
+								<img style="width: 28px" src="/Imgs/PageMng_ico.png" alt="<%=GetGlobalResourceObject("resource", "PagesMng")%>" title="<%=GetGlobalResourceObject("resource", "PagesMng")%>" /></a>
+							<a href="/FileMan.aspx">
+								<img style="width: 28px" src="/Imgs/directory_ico.png" alt="<%=GetGlobalResourceObject("resource", "FilesMng")%>" title="<%=GetGlobalResourceObject("resource", "FilesMng")%>" /></a>
+							<a href="http://www.imencms.com/temp/pah.pdf">
+								<img style="width: 28px" src="/Imgs/adminhelp.png" alt="<%=GetGlobalResourceObject("resource", "AdminHelp")%>" title="<%=GetGlobalResourceObject("resource", "AdminHelp")%>" /></a>
+							<a href="/SettingUnits.aspx?ID=1">
+								<img style="width: 28px" src="/Imgs/Setting_ico.png" alt="<%=GetGlobalResourceObject("resource", "PublicSetting")%>" title="<%=GetGlobalResourceObject("resource", "PublicSetting")%>" /></a>
+							<a href="#" onclick="SelectPrepMsg('/PageAddress.aspx',500,400)">
+								<img style="width: 28px" src="/Imgs/infoico.png" alt="<%=GetGlobalResourceObject("resource", "PagesHelp")%>" title="<%=GetGlobalResourceObject("resource", "PagesHelp")%>" /></a>
+							<a href="/Default.aspx?ID=Exit">
+								<img style="width: 28px" src="/Imgs/signout.png" alt="<%=GetGlobalResourceObject("resource", "Exit")%>" title="<%=GetGlobalResourceObject("resource", "Exit")%>" /></a>
+						</div>
+					</div>
+					<div>
+						<marquee behavior="SCROLL" direction="<%=GetGlobalResourceObject("resource", "_Align")%>"> <%=ToolTip%> </marquee>
+						<br />
+					</div>
+					<div id="Frame" style="border: #ab97bc 0px solid; left: -30px; width: 100%; top: 15px;"
+						align="center">
+						<br />
+						<a href="" runat="server" id="BackHref">
+							<img align="left" visible="false" alt="<%$ resources: resource, BackText%>" title="<%$ resources: resource, BackText%>" id="BackIMG"
+								runat="server" src="/Imgs/Back.png" style="border: none; cursor: hand; width: 25px; margin-top: -15px; margin-left: 0px" /></a>
+						<a href="" runat="server" id="SettingHref">
+                            <img align="left" visible="false" id="SettingIMG" runat="server" alt="<%$ resources: resource, SysSetting%>" title="<%$ resources: resource, SysSetting%>" src="/Imgs/configuration.png" style="border: none; cursor: hand; width: 25px; margin-top: -15px; margin-left: 0px" /></a>
+					</div>
+                    <br />
+					<div id="Div1" style="text-align: center; border: #ab97bc 0px solid; left: -30px; width: 100%; top: 15px; color: #363d4b;" align="center">
+						<asp:ContentPlaceHolder ID="Body" runat="server">
+						</asp:ContentPlaceHolder>
+					</div>
+
+					<div style="clear: both;"></div>
+					<div dir="ltr" style="font-size: 11px; color: #9097a9; padding: 30px; margin-top: 20px;">
+						<a style="font-size: 10px; color: #0b91d0" href="http://www.spw.ir">© ImenCMS.com - Powerd & Design
+			By: SPW.ir Co. </a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="dialog-modal-teb" title="" style="display: none">
+			<iframe id="modalIFrameTeb" width="100%" height="100%" marginwidth="0" marginheight="0"
+				frameborder="0" scrolling="auto" title="Dialog Title"></iframe>
+		</div>
+
+
+	</form>
+</body>
+</html>
