@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OfficeImage.aspx.cs" Inherits="Portal.Automation.OfficeImage" %>

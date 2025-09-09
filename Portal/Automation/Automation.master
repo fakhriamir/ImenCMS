@@ -1,0 +1,133 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/View.Master" AutoEventWireup="true" CodeBehind="Automation.master.cs" Inherits="Portal.Automation.Automation" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="MyHead" runat="server">
+	<link href="/Style/jquery.autocomplete.css" rel="stylesheet" type="text/css" />
+	<script src="/Scripts/jquery.autocomplete.js" type="text/javascript"></script>
+	<script src="/Scripts/SMSSystem.js" type="text/javascript"></script>
+	<link href="/Style/SMSSystem.css" rel="stylesheet" type="text/css" />
+	<script src="/Scripts/ui.core.js" type="text/javascript"></script>
+	<script src="/Scripts/ui.dialog.js" type="text/javascript"></script>
+	<script src="/Scripts/ui.draggable.js" type="text/javascript"></script>
+	<link href="/Style/jquery-ui-1.7.2.custom.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('table.TableColor tr:even').addClass('RowItem');
+			$('table.TableColor tr:odd').addClass('RowAlter');
+			$(".ribbon-button").click(function () {
+				var link = $(this).attr("src");
+				document.location.href = link;
+				//alert(link);
+			});
+
+			$('#MyDashboard tr').dblclick(function () {
+				var href = $(this).find("td").attr("name");
+				var refID = $(this).find("td").attr("refid");
+				if (href) {
+					SelectPrepMsg('/Automation/ViewLetter-' + href + '.aspx?RefID=' + refID, 900, 600);
+				}
+			});
+			//$('#MoveLetterDiv input').click(function () {
+			//	alert("");
+			//	var href = $(this).find(".MoveLetter").attr("LetterID");
+			//	if (href) {
+			//		alert(href);
+			//	}
+			//});
+		});
+
+		function SetLetterType(LID) {
+			var SelVal = document.getElementById("MoveLetter" + LID).value;
+			if (SelVal == "#") {
+				alert("لطفا یک گزینه انتخاب نمایید");
+				return;
+			}
+			GetAjaxVal("/Ajax.aspx?MyType=R" + LID + "_" + SelVal, 8);
+			document.getElementById("LoadIMG" + LID).style.display = "";
+		}
+		function SetAutomationRefCallBack(ID) {
+			//alert(ID);
+			document.getElementById("LoadIMG" + ID).style.display = "none";
+			document.getElementById("TR" + ID).style.display = "none";
+		}
+	</script>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MyBody" runat="server">
+	<div runat="server" id="UserInfo" visible="true" style="background-color: #3b3b3b ; 
+    border-bottom: 4px solid #3269ff; color:#fff;
+    border-top:1px solid #494848;
+    vertical-align:middle; text-align: right; height: 33px; ">
+		<%=DAL.CheckData.GetUserLogonState()%>
+	</div>
+	<div id="UserMenu" class="UserMenu" runat="server" visible="true">
+		<span src="/Automation/Default.aspx" class="ribbon-button">
+			<img src="/Automation/Images/home.png">
+			<br />
+			<span>صفحه اصلی</span>
+		</span>
+		<span src="/Automation/NewLetter.aspx" class="ribbon-button">
+			<img src="/Automation/Images/NewLetter.png">
+			<br />
+			<span>صدور نامه</span>
+
+		</span>
+		<span src="/Automation/Dashboard.aspx" class="ribbon-button">
+			<img src="/Automation/Images/Dashboard.png"><label style="color: Red; font-family: titr,b titr,Tahoma; line-height: 10px"><%=RefCNT%></label>
+			<br />
+			<span>کارتابل نامه</span>
+		</span>
+		<span src="/Automation/Dashboard-Follow.aspx" class="ribbon-button">
+			<img src="/Automation/Images/kartablPeygiri.png"><label style="color: Red; font-family: titr,b titr,Tahoma; line-height: 10px"><%=RefFollowCNT%></label>
+			<br />
+			<span>کارتابل پیگیری</span>
+		</span>
+		<span src="/Automation/SendLetter.aspx" class="ribbon-button">
+			<img src="/Automation/Images/SentLetters.png">
+			<br />
+			<span>نامه های صادره</span>
+		</span>
+		<span src="/" class="ribbon-button">
+			<img src="/Automation/Images/Draft.png">
+			<br />
+			<span>پیش نویس نامه</span>
+		</span>
+		<span src="/Automation/Dashboard-Work.aspx" class="ribbon-button">
+			<img src="/Automation/Images/Folder.png">
+			<br />
+			<span>پوشه های کاری</span>
+		</span>
+		<span src="/Automation/NewLetter-In.aspx" class="ribbon-button">
+			<img src="/Automation/Images/Folder.png">
+			<br />
+			<span>ثبت نامه وارده</span>
+		</span>
+		<span src="/Automation/Search.aspx" class="ribbon-button">
+			<img src="/Automation/Images/search.png">
+			<br />
+			<span>جستجوی نامه</span>
+		</span>
+		<span src="/SMS/BuySMS.aspx" class="ribbon-button"></span>
+
+	</div>
+	<div style="width: 100%;">
+		<asp:PlaceHolder ID="AdvertisePH" runat="server" />
+	</div>
+	<table style="width: 100%">
+		<tr>
+			<td style="width: 0px;" valign="top">
+				<asp:PlaceHolder ID="RightPH" runat="server"></asp:PlaceHolder>
+			</td>
+			<td valign="top">
+				<asp:ContentPlaceHolder ID="AutomationBody" runat="server" />
+			</td>
+		</tr>
+	</table>
+	<div id="dialog-modal-teb" title="اتوماسیون اداری" style="display: none">
+		<iframe id="modalIFrameTeb" width="100%" height="100%" marginwidth="0" marginheight="0"
+			frameborder="0" scrolling="auto" title="Dialog Title"></iframe>
+	</div>
+	<div id="dialog-modal-teb1" title="اتوماسیون اداری" style="display: none">
+		
+		<iframe id="modalIFrameTeb1" width="100%" height="100%" marginwidth="0" marginheight="0"
+			frameborder="0" scrolling="auto" title="Dialog Title"></iframe>
+	</div>
+</asp:Content>
