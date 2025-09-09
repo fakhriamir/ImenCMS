@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SMSQueue.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SMSQueue_com_sahandsms_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://sahandsms.com/WebService_fakhri/Service.asmx</Value>
+    </Setting>
+    <Setting Name="SMSQueue_NewSahandwebservice_NewSmsWebservice" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://webservice.sahandsms.com/newsmswebservice.asmx</Value>
+    </Setting>
+    <Setting Name="SMSQueue_com_candoosms_panel_CanDoo_SMS_API" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://my.candoosms.com/services/index.php</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

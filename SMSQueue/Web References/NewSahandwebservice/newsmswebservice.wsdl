@@ -1,0 +1,1351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s2="http://tempuri.org/AbstractTypes" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="SendFromUrl">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendFromUrlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendFromUrlResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ArraySendQeue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Messages" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mobiles" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="senderNumbers" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArraySendQeueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ArraySendQeueResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArraySendQeueWithId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ids" type="tns:ArrayOfGuid" />
+            <s:element minOccurs="0" maxOccurs="1" name="Messages" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mobiles" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="senderNumbers" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGuid">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="guid" type="s1:guid" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ArraySendQeueWithIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ArraySendQeueWithIdResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendQeue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toNumbers" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendQeueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendQeueResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Send">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toNumbers" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendResult" type="tns:ArrayOfLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLong">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="long" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUserCredit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserCreditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUserCreditResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMessageStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MessageIds" type="tns:ArrayOfLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMessageStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMessageStatusResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetQueueMessageStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MessageIds" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetQueueMessageStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetQueueMessageStatusResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckCredit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SmsFaCount" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SmsEnCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckCreditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckCreditResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTarrifOperator">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="linenumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTarrifOperatorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTarrifOperatorResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecieveSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enddate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecieveSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecieveSMSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnreadMessgese">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnreadMessgeseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUnreadMessgeseResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="messages" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromNumber" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="recivedates" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnreadMessgeseWithUsername">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnreadMessgeseWithUsernameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUnreadMessgeseWithUsernameResult" type="tns:ArrayOfRecieveSms" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRecieveSms">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RecieveSms" nillable="true" type="tns:RecieveSms" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RecieveSms">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RcvSmsText" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RcvsmsKeyWord" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RcvSmsfrom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RcvSmsTo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RcvSmsInteredDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RcvSmsUDH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RcvsmsCharSet" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="rcvSmsSmsC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RcvSmsStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RcvSmsMessageID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RcvSmsRuleID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RcvSmsDeliveredTime" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RcvSmsReeded" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="UsrId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RecieveSMSId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OperatorId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RecieveDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Test">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckVersion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckVersionResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+      <s:element name="ArrayOfLong" nillable="true" type="tns:ArrayOfLong" />
+      <s:element name="int" type="s:int" />
+      <s:element name="ArrayOfInt" nillable="true" type="tns:ArrayOfInt" />
+      <s:element name="double" type="s:double" />
+      <s:element name="DataTable" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfRecieveSms" nillable="true" type="tns:ArrayOfRecieveSms" />
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+    <s:schema targetNamespace="http://tempuri.org/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendFromUrlSoapIn">
+    <wsdl:part name="parameters" element="tns:SendFromUrl" />
+  </wsdl:message>
+  <wsdl:message name="SendFromUrlSoapOut">
+    <wsdl:part name="parameters" element="tns:SendFromUrlResponse" />
+  </wsdl:message>
+  <wsdl:message name="ArraySendQeueSoapIn">
+    <wsdl:part name="parameters" element="tns:ArraySendQeue" />
+  </wsdl:message>
+  <wsdl:message name="ArraySendQeueSoapOut">
+    <wsdl:part name="parameters" element="tns:ArraySendQeueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ArraySendQeueWithIdSoapIn">
+    <wsdl:part name="parameters" element="tns:ArraySendQeueWithId" />
+  </wsdl:message>
+  <wsdl:message name="ArraySendQeueWithIdSoapOut">
+    <wsdl:part name="parameters" element="tns:ArraySendQeueWithIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendQeueSoapIn">
+    <wsdl:part name="parameters" element="tns:SendQeue" />
+  </wsdl:message>
+  <wsdl:message name="SendQeueSoapOut">
+    <wsdl:part name="parameters" element="tns:SendQeueResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendSoapIn">
+    <wsdl:part name="parameters" element="tns:Send" />
+  </wsdl:message>
+  <wsdl:message name="SendSoapOut">
+    <wsdl:part name="parameters" element="tns:SendResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserCreditSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserCredit" />
+  </wsdl:message>
+  <wsdl:message name="GetUserCreditSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserCreditResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMessageStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMessageStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetMessageStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMessageStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetQueueMessageStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetQueueMessageStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetQueueMessageStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetQueueMessageStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckCreditSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckCredit" />
+  </wsdl:message>
+  <wsdl:message name="CheckCreditSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckCreditResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTarrifOperatorSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTarrifOperator" />
+  </wsdl:message>
+  <wsdl:message name="GetTarrifOperatorSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTarrifOperatorResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecieveSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:RecieveSMS" />
+  </wsdl:message>
+  <wsdl:message name="RecieveSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:RecieveSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnreadMessgeseSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnreadMessgese" />
+  </wsdl:message>
+  <wsdl:message name="GetUnreadMessgeseSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnreadMessgeseResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnreadMessgeseWithUsernameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnreadMessgeseWithUsername" />
+  </wsdl:message>
+  <wsdl:message name="GetUnreadMessgeseWithUsernameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnreadMessgeseWithUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestSoapIn">
+    <wsdl:part name="parameters" element="tns:Test" />
+  </wsdl:message>
+  <wsdl:message name="TestSoapOut">
+    <wsdl:part name="parameters" element="tns:TestResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckVersion" />
+  </wsdl:message>
+  <wsdl:message name="CheckVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendFromUrlHttpGetIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="message" type="s:string" />
+    <wsdl:part name="fromNumber" type="s:string" />
+    <wsdl:part name="toNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendFromUrlHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="ArraySendQeueHttpGetIn">
+    <wsdl:part name="Messages" type="s2:StringArray" />
+    <wsdl:part name="Mobiles" type="s2:StringArray" />
+    <wsdl:part name="senderNumbers" type="s2:StringArray" />
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ArraySendQeueHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="SendQeueHttpGetIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="message" type="s:string" />
+    <wsdl:part name="fromNumber" type="s:string" />
+    <wsdl:part name="toNumbers" type="s2:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="SendQeueHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="SendHttpGetIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="message" type="s:string" />
+    <wsdl:part name="fromNumber" type="s:string" />
+    <wsdl:part name="toNumbers" type="s2:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="SendHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLong" />
+  </wsdl:message>
+  <wsdl:message name="GetUserCreditHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserCreditHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetMessageStatusHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="MessageIds" type="s2:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GetMessageStatusHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInt" />
+  </wsdl:message>
+  <wsdl:message name="GetQueueMessageStatusHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="MessageIds" type="s2:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GetQueueMessageStatusHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInt" />
+  </wsdl:message>
+  <wsdl:message name="CheckCreditHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="SmsFaCount" type="s:string" />
+    <wsdl:part name="SmsEnCount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckCreditHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetTarrifOperatorHttpGetIn">
+    <wsdl:part name="linenumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTarrifOperatorHttpGetOut">
+    <wsdl:part name="Body" element="tns:double" />
+  </wsdl:message>
+  <wsdl:message name="RecieveSMSHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="phNo" type="s:string" />
+    <wsdl:part name="startdate" type="s:string" />
+    <wsdl:part name="enddate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RecieveSMSHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetUnreadMessgeseWithUsernameHttpGetIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUnreadMessgeseWithUsernameHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfRecieveSms" />
+  </wsdl:message>
+  <wsdl:message name="TestHttpGetIn">
+    <wsdl:part name="str" type="s2:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="TestHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckVersionHttpGetIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckVersionHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="SendFromUrlHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="message" type="s:string" />
+    <wsdl:part name="fromNumber" type="s:string" />
+    <wsdl:part name="toNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendFromUrlHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="ArraySendQeueHttpPostIn">
+    <wsdl:part name="Messages" type="s2:StringArray" />
+    <wsdl:part name="Mobiles" type="s2:StringArray" />
+    <wsdl:part name="senderNumbers" type="s2:StringArray" />
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ArraySendQeueHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="SendQeueHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="message" type="s:string" />
+    <wsdl:part name="fromNumber" type="s:string" />
+    <wsdl:part name="toNumbers" type="s2:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="SendQeueHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="SendHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="message" type="s:string" />
+    <wsdl:part name="fromNumber" type="s:string" />
+    <wsdl:part name="toNumbers" type="s2:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="SendHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLong" />
+  </wsdl:message>
+  <wsdl:message name="GetUserCreditHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserCreditHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetMessageStatusHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="MessageIds" type="s2:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GetMessageStatusHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInt" />
+  </wsdl:message>
+  <wsdl:message name="GetQueueMessageStatusHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="MessageIds" type="s2:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GetQueueMessageStatusHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInt" />
+  </wsdl:message>
+  <wsdl:message name="CheckCreditHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="SmsFaCount" type="s:string" />
+    <wsdl:part name="SmsEnCount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckCreditHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetTarrifOperatorHttpPostIn">
+    <wsdl:part name="linenumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTarrifOperatorHttpPostOut">
+    <wsdl:part name="Body" element="tns:double" />
+  </wsdl:message>
+  <wsdl:message name="RecieveSMSHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="phNo" type="s:string" />
+    <wsdl:part name="startdate" type="s:string" />
+    <wsdl:part name="enddate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RecieveSMSHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetUnreadMessgeseWithUsernameHttpPostIn">
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUnreadMessgeseWithUsernameHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfRecieveSms" />
+  </wsdl:message>
+  <wsdl:message name="TestHttpPostIn">
+    <wsdl:part name="str" type="s2:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="TestHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckVersionHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckVersionHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:portType name="NewSmsWebserviceSoap">
+    <wsdl:operation name="SendFromUrl">
+      <wsdl:input message="tns:SendFromUrlSoapIn" />
+      <wsdl:output message="tns:SendFromUrlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ArraySendQeue">
+      <wsdl:input message="tns:ArraySendQeueSoapIn" />
+      <wsdl:output message="tns:ArraySendQeueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ArraySendQeueWithId">
+      <wsdl:input message="tns:ArraySendQeueWithIdSoapIn" />
+      <wsdl:output message="tns:ArraySendQeueWithIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendQeue">
+      <wsdl:input message="tns:SendQeueSoapIn" />
+      <wsdl:output message="tns:SendQeueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Send">
+      <wsdl:input message="tns:SendSoapIn" />
+      <wsdl:output message="tns:SendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCredit">
+      <wsdl:input message="tns:GetUserCreditSoapIn" />
+      <wsdl:output message="tns:GetUserCreditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageStatus">
+      <wsdl:input message="tns:GetMessageStatusSoapIn" />
+      <wsdl:output message="tns:GetMessageStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQueueMessageStatus">
+      <wsdl:input message="tns:GetQueueMessageStatusSoapIn" />
+      <wsdl:output message="tns:GetQueueMessageStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckCredit">
+      <wsdl:input message="tns:CheckCreditSoapIn" />
+      <wsdl:output message="tns:CheckCreditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTarrifOperator">
+      <wsdl:input message="tns:GetTarrifOperatorSoapIn" />
+      <wsdl:output message="tns:GetTarrifOperatorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecieveSMS">
+      <wsdl:input message="tns:RecieveSMSSoapIn" />
+      <wsdl:output message="tns:RecieveSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnreadMessgese">
+      <wsdl:input message="tns:GetUnreadMessgeseSoapIn" />
+      <wsdl:output message="tns:GetUnreadMessgeseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnreadMessgeseWithUsername">
+      <wsdl:input message="tns:GetUnreadMessgeseWithUsernameSoapIn" />
+      <wsdl:output message="tns:GetUnreadMessgeseWithUsernameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <wsdl:input message="tns:TestSoapIn" />
+      <wsdl:output message="tns:TestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckVersion">
+      <wsdl:input message="tns:CheckVersionSoapIn" />
+      <wsdl:output message="tns:CheckVersionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="NewSmsWebserviceHttpGet">
+    <wsdl:operation name="SendFromUrl">
+      <wsdl:input message="tns:SendFromUrlHttpGetIn" />
+      <wsdl:output message="tns:SendFromUrlHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ArraySendQeue">
+      <wsdl:input message="tns:ArraySendQeueHttpGetIn" />
+      <wsdl:output message="tns:ArraySendQeueHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendQeue">
+      <wsdl:input message="tns:SendQeueHttpGetIn" />
+      <wsdl:output message="tns:SendQeueHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Send">
+      <wsdl:input message="tns:SendHttpGetIn" />
+      <wsdl:output message="tns:SendHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCredit">
+      <wsdl:input message="tns:GetUserCreditHttpGetIn" />
+      <wsdl:output message="tns:GetUserCreditHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageStatus">
+      <wsdl:input message="tns:GetMessageStatusHttpGetIn" />
+      <wsdl:output message="tns:GetMessageStatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQueueMessageStatus">
+      <wsdl:input message="tns:GetQueueMessageStatusHttpGetIn" />
+      <wsdl:output message="tns:GetQueueMessageStatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckCredit">
+      <wsdl:input message="tns:CheckCreditHttpGetIn" />
+      <wsdl:output message="tns:CheckCreditHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTarrifOperator">
+      <wsdl:input message="tns:GetTarrifOperatorHttpGetIn" />
+      <wsdl:output message="tns:GetTarrifOperatorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecieveSMS">
+      <wsdl:input message="tns:RecieveSMSHttpGetIn" />
+      <wsdl:output message="tns:RecieveSMSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnreadMessgeseWithUsername">
+      <wsdl:input message="tns:GetUnreadMessgeseWithUsernameHttpGetIn" />
+      <wsdl:output message="tns:GetUnreadMessgeseWithUsernameHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <wsdl:input message="tns:TestHttpGetIn" />
+      <wsdl:output message="tns:TestHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckVersion">
+      <wsdl:input message="tns:CheckVersionHttpGetIn" />
+      <wsdl:output message="tns:CheckVersionHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="NewSmsWebserviceHttpPost">
+    <wsdl:operation name="SendFromUrl">
+      <wsdl:input message="tns:SendFromUrlHttpPostIn" />
+      <wsdl:output message="tns:SendFromUrlHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ArraySendQeue">
+      <wsdl:input message="tns:ArraySendQeueHttpPostIn" />
+      <wsdl:output message="tns:ArraySendQeueHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendQeue">
+      <wsdl:input message="tns:SendQeueHttpPostIn" />
+      <wsdl:output message="tns:SendQeueHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Send">
+      <wsdl:input message="tns:SendHttpPostIn" />
+      <wsdl:output message="tns:SendHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCredit">
+      <wsdl:input message="tns:GetUserCreditHttpPostIn" />
+      <wsdl:output message="tns:GetUserCreditHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageStatus">
+      <wsdl:input message="tns:GetMessageStatusHttpPostIn" />
+      <wsdl:output message="tns:GetMessageStatusHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQueueMessageStatus">
+      <wsdl:input message="tns:GetQueueMessageStatusHttpPostIn" />
+      <wsdl:output message="tns:GetQueueMessageStatusHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckCredit">
+      <wsdl:input message="tns:CheckCreditHttpPostIn" />
+      <wsdl:output message="tns:CheckCreditHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTarrifOperator">
+      <wsdl:input message="tns:GetTarrifOperatorHttpPostIn" />
+      <wsdl:output message="tns:GetTarrifOperatorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecieveSMS">
+      <wsdl:input message="tns:RecieveSMSHttpPostIn" />
+      <wsdl:output message="tns:RecieveSMSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnreadMessgeseWithUsername">
+      <wsdl:input message="tns:GetUnreadMessgeseWithUsernameHttpPostIn" />
+      <wsdl:output message="tns:GetUnreadMessgeseWithUsernameHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <wsdl:input message="tns:TestHttpPostIn" />
+      <wsdl:output message="tns:TestHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckVersion">
+      <wsdl:input message="tns:CheckVersionHttpPostIn" />
+      <wsdl:output message="tns:CheckVersionHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NewSmsWebserviceSoap" type="tns:NewSmsWebserviceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendFromUrl">
+      <soap:operation soapAction="http://tempuri.org/SendFromUrl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArraySendQeue">
+      <soap:operation soapAction="http://tempuri.org/ArraySendQeue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArraySendQeueWithId">
+      <soap:operation soapAction="http://tempuri.org/ArraySendQeueWithId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendQeue">
+      <soap:operation soapAction="http://tempuri.org/SendQeue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send">
+      <soap:operation soapAction="http://tempuri.org/Send" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCredit">
+      <soap:operation soapAction="http://tempuri.org/GetUserCredit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageStatus">
+      <soap:operation soapAction="http://tempuri.org/GetMessageStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQueueMessageStatus">
+      <soap:operation soapAction="http://tempuri.org/GetQueueMessageStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckCredit">
+      <soap:operation soapAction="http://tempuri.org/CheckCredit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTarrifOperator">
+      <soap:operation soapAction="http://tempuri.org/GetTarrifOperator" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecieveSMS">
+      <soap:operation soapAction="http://tempuri.org/RecieveSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnreadMessgese">
+      <soap:operation soapAction="http://tempuri.org/GetUnreadMessgese" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnreadMessgeseWithUsername">
+      <soap:operation soapAction="http://tempuri.org/GetUnreadMessgeseWithUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap:operation soapAction="http://tempuri.org/Test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckVersion">
+      <soap:operation soapAction="http://tempuri.org/CheckVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NewSmsWebserviceSoap12" type="tns:NewSmsWebserviceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendFromUrl">
+      <soap12:operation soapAction="http://tempuri.org/SendFromUrl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArraySendQeue">
+      <soap12:operation soapAction="http://tempuri.org/ArraySendQeue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArraySendQeueWithId">
+      <soap12:operation soapAction="http://tempuri.org/ArraySendQeueWithId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendQeue">
+      <soap12:operation soapAction="http://tempuri.org/SendQeue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send">
+      <soap12:operation soapAction="http://tempuri.org/Send" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCredit">
+      <soap12:operation soapAction="http://tempuri.org/GetUserCredit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetMessageStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQueueMessageStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetQueueMessageStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckCredit">
+      <soap12:operation soapAction="http://tempuri.org/CheckCredit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTarrifOperator">
+      <soap12:operation soapAction="http://tempuri.org/GetTarrifOperator" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecieveSMS">
+      <soap12:operation soapAction="http://tempuri.org/RecieveSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnreadMessgese">
+      <soap12:operation soapAction="http://tempuri.org/GetUnreadMessgese" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnreadMessgeseWithUsername">
+      <soap12:operation soapAction="http://tempuri.org/GetUnreadMessgeseWithUsername" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap12:operation soapAction="http://tempuri.org/Test" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckVersion">
+      <soap12:operation soapAction="http://tempuri.org/CheckVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NewSmsWebserviceHttpGet" type="tns:NewSmsWebserviceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="SendFromUrl">
+      <http:operation location="/SendFromUrl" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArraySendQeue">
+      <http:operation location="/ArraySendQeue" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendQeue">
+      <http:operation location="/SendQeue" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send">
+      <http:operation location="/Send" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCredit">
+      <http:operation location="/GetUserCredit" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageStatus">
+      <http:operation location="/GetMessageStatus" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQueueMessageStatus">
+      <http:operation location="/GetQueueMessageStatus" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckCredit">
+      <http:operation location="/CheckCredit" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTarrifOperator">
+      <http:operation location="/GetTarrifOperator" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecieveSMS">
+      <http:operation location="/RecieveSMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnreadMessgeseWithUsername">
+      <http:operation location="/GetUnreadMessgeseWithUsername" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <http:operation location="/Test" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckVersion">
+      <http:operation location="/CheckVersion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NewSmsWebserviceHttpPost" type="tns:NewSmsWebserviceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="SendFromUrl">
+      <http:operation location="/SendFromUrl" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArraySendQeue">
+      <http:operation location="/ArraySendQeue" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendQeue">
+      <http:operation location="/SendQeue" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Send">
+      <http:operation location="/Send" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCredit">
+      <http:operation location="/GetUserCredit" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageStatus">
+      <http:operation location="/GetMessageStatus" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQueueMessageStatus">
+      <http:operation location="/GetQueueMessageStatus" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckCredit">
+      <http:operation location="/CheckCredit" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTarrifOperator">
+      <http:operation location="/GetTarrifOperator" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecieveSMS">
+      <http:operation location="/RecieveSMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnreadMessgeseWithUsername">
+      <http:operation location="/GetUnreadMessgeseWithUsername" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <http:operation location="/Test" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckVersion">
+      <http:operation location="/CheckVersion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NewSmsWebservice">
+    <wsdl:port name="NewSmsWebserviceSoap" binding="tns:NewSmsWebserviceSoap">
+      <soap:address location="http://webservice.sahandsms.com/newsmswebservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="NewSmsWebserviceSoap12" binding="tns:NewSmsWebserviceSoap12">
+      <soap12:address location="http://webservice.sahandsms.com/newsmswebservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="NewSmsWebserviceHttpGet" binding="tns:NewSmsWebserviceHttpGet">
+      <http:address location="http://webservice.sahandsms.com/newsmswebservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="NewSmsWebserviceHttpPost" binding="tns:NewSmsWebserviceHttpPost">
+      <http:address location="http://webservice.sahandsms.com/newsmswebservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
