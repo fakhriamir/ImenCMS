@@ -1,0 +1,233 @@
+﻿@font-face {
+	font-family: "Imenyekan";
+	src: url(/files/44/templates/new/Font/BYekan.eot?#) format("eot"), url(/files/44/templates/new/font/BYekan.woff) format("woff"), url(/files/44/templates/new/font/BYekan.ttf) format("truetype");
+}
+.smalltoolbar
+{
+	text-align:right;
+	
+}
+.TopicTable
+{
+	border:1px solid #eeeeee;
+}
+body
+{
+	font-family:Tahoma;
+}
+.RowItem
+{
+    vertical-align:middle;
+    
+}
+.RowAlter
+{
+    background-color:#f1f1f1;
+    vertical-align:middle;
+}
+
+.RowAlter:hover
+{
+    background-color:#eff9fe;
+}
+.RowItem:hover
+{
+    background-color:#eff9fe;   
+}
+
+input 
+{
+	font-family:Tahoma;
+	
+}
+.Def_article_img
+{
+    width:100px;
+    height:80px;
+    border-width:0px;
+}
+.Def_article_title
+{
+    
+}
+.Def_article_Chekide
+{
+    font-family:Mitra;
+}
+.Def_News_Image
+{
+    width:100px;
+    height:62px;
+    border-width:0px;
+}
+.Def_News_Title
+{
+    color:#972726;
+}
+.Def_News_Title2
+{
+	
+    color:#484944;
+}
+.Def_News_Chekide
+{
+}
+.Comment_Table
+{
+    border-width:1px;
+    
+}
+.Comment_Title_TD
+{
+    
+}
+.Comment_Items_TR1
+{
+    background: #ececec;
+     border-bottom: solid 1px #d8d8d8;
+}
+.Comment_Items_TR1
+{
+background: #ececec; 
+border-bottom: solid 1px #d8d8d8;
+}
+.Comment_Item_Name_TD
+{
+    
+}
+.Comment_Item_Email_TD
+{
+    
+}
+.Comment_Item_Text_TD
+{
+    
+}
+.Comment_Add_Table
+{
+    
+    border-width:1px;
+}
+.Comment_Add_Title_TD
+{
+    
+}
+.Comment_Add_Name_TD
+{
+    width: 100px;
+}
+.Comment_Add_Name_TR
+{
+    
+}
+.Comment_Add_Email_TR
+{
+    
+}
+.Comment_Add_Email_TD
+{
+    
+}
+.Comment_Add_Comment_TR
+{
+    
+}
+.Comment_Add_Comment_TD
+{
+    
+}
+.Comment_Add_BTN_TD
+{
+    
+}
+.Comment_Add_BTN
+{
+    
+}
+.Def_Contact_Title{}
+.Def_Contact_Title_Item{}
+.Def_Contact_Manager_Item{}
+.Def_Contact_Manager{}
+.Def_Contact_Email_Item{}
+.Def_Contact_Email{}
+.Def_Contact_TelNo_Item{}
+.Def_Contact_TelNo{}
+.Def_Contact_Fax_Item{}
+.Def_Contact_Fax{}
+.Def_Marquee{}
+.Def_Gallery_Img
+{
+    width:130px;
+    border-width:0px;
+}
+.Def_Links_Table
+{
+    
+}
+.Def_Links_TR
+{
+    
+}
+.Def_Links_IMG
+{
+    width:100px;
+    border-width:0px;
+}
+.Def_Links_Title
+{
+    
+}
+.Def_Links_Text{}
+
+.Def_Login_Table
+{
+     width:100%;
+     border-width:0px;
+}
+.Def_Login_UserName_TD{}
+.Def_Login_Password_TD{}
+.Def_Login_BTN{}
+.Def_Login_PassTB{}
+.Def_Login_UserTB{}
+.Def_Login_MessLB
+{
+    color:Red;
+    }
+.Def_Login_BTN_TD{}
+
+.Def_ArticleType_Table{}  
+.Def_GalleryType_Table
+{
+    width: 90%;
+}
+.Def_Match_Table
+{
+    width:100%;
+    border:none 0 #ffffff;
+}
+.Def_Match_Div
+{
+        width:100%;
+}
+.Def_Match_NameTB{}
+.Def_Match_MailTB{}
+.Def_Match_MobTB{}
+#ForumTable
+{
+	width:100%;
+	border:1px solid blue;
+}
+#ForumTitle
+{
+	background-color:Lime;
+}
+#ForumTitle img
+{
+	float:right;
+	margin:5px 5px 5px 5px;
+}
+#ForumTopic 
+{
+	border:1px solid red;
+	width:100%;
+}

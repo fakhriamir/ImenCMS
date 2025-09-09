@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Dialog.master.cs" Inherits="Portal.Dialog" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<title>..:: ::..</title>
+	<!-------- Portal Imen v 2.3 ------->
+	<!--------     S.P.W. Co.    ------->
+	<!-------   www.imenCMS.com  ------->
+	<!--     Info(a)ImenCMS(dot)com   -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Language" content="fa" />
+	<meta name="robots" content="all" />
+	<meta name="robots" content="index,follow" />
+	<meta name="GOOGLEBOT" content="all" />
+	<meta name="GOOGLEBOT" content="index,follow" />
+	<script type="text/javascript" language="javascript" src="/Scripts/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" language="javascript" src="/Scripts/jquery.cookie.js"></script>
+	<script src="/Scripts/jquery.alerts.js" type="text/javascript"></script>
+	<link href="/Style/jquery.alerts.css" rel="stylesheet" type="text/css" />
+	
+	<script type="text/javascript" language="javascript" src="/Scripts/city.js"></script>
+	<link href="/Master.css" rel="Stylesheet" type="text/css" />
+	<script type="text/javascript" language="javascript" src="/Scripts/Page.js"></script>
+	<link id="SiteCSS" runat="server" rel="Stylesheet" type="text/css" />
+	<link id="BrowserCSS" runat="server" rel="Stylesheet" type="text/css" />
+	
+	<asp:ContentPlaceHolder ID="headCP" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body dir="rtl">
+	<form id="form1" runat="server">
+	<div>
+		<asp:ContentPlaceHolder ID="BoduCB" runat="server">
+		</asp:ContentPlaceHolder>
+	</div>
+	</form>
+</body>
+</html>

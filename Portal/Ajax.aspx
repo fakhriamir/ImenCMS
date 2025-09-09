@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" ValidateRequest="false" AutoEventWireup="true" CodeBehind="Ajax.aspx.cs" Inherits="Portal.Ajax" %>

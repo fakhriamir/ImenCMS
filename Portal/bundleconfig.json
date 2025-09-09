@@ -1,0 +1,14 @@
+[
+  {
+    "outputFileName": "Style/MapTiles.min.css",
+    "inputFiles": [
+      "Style/MapTiles.css"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/MapTiles.min.js",
+    "inputFiles": [
+      "Scripts/MapTiles.js"
+    ]
+  }
+]

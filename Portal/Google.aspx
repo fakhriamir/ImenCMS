@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" EnableViewState="false" AutoEventWireup="true" CodeBehind="Google.aspx.cs" Inherits="Portal.Google" %>
