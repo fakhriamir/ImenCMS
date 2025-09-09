@@ -1,0 +1,72 @@
+d:\data\documents\visual studio 2010\Projects\OnlineSupport\CahtDLL\bin\CahtDLL.dll
+d:\data\documents\visual studio 2010\Projects\OnlineSupport\CahtDLL\bin\CahtDLL.pdb
+d:\data\documents\visual studio 2010\Projects\OnlineSupport\CahtDLL\obj\Debug\ResolveAssemblyReference.cache
+d:\data\documents\visual studio 2010\Projects\OnlineSupport\CahtDLL\obj\Debug\CahtDLL.dll
+d:\data\documents\visual studio 2010\Projects\OnlineSupport\CahtDLL\obj\Debug\CahtDLL.pdb
+D:\Data\Documents\Visual Studio 2008\Projects\Portal\CahtDLL\bin\CahtDLL.dll
+D:\Data\Documents\Visual Studio 2008\Projects\Portal\CahtDLL\bin\CahtDLL.pdb
+D:\Data\Documents\Visual Studio 2008\Projects\Portal\CahtDLL\obj\Debug\ResolveAssemblyReference.cache
+D:\Data\Documents\Visual Studio 2008\Projects\Portal\CahtDLL\obj\Debug\CahtDLL.dll
+D:\Data\Documents\Visual Studio 2008\Projects\Portal\CahtDLL\obj\Debug\CahtDLL.pdb
+D:\Data\Documents\Visual Studio 2010\Projects\Portal\CahtDLL\bin\CahtDLL.dll
+D:\Data\Documents\Visual Studio 2010\Projects\Portal\CahtDLL\bin\CahtDLL.pdb
+D:\Data\Documents\Visual Studio 2010\Projects\Portal\CahtDLL\obj\Debug\ResolveAssemblyReference.cache
+D:\Data\Documents\Visual Studio 2010\Projects\Portal\CahtDLL\obj\Debug\CahtDLL.dll
+D:\Data\Documents\Visual Studio 2010\Projects\Portal\CahtDLL\obj\Debug\CahtDLL.pdb
+F:\Projects\Portal\CahtDLL\bin\CahtDLL.dll
+F:\Projects\Portal\CahtDLL\bin\CahtDLL.pdb
+F:\Projects\Portal\CahtDLL\obj\Debug\ResolveAssemblyReference.cache
+F:\Projects\Portal\CahtDLL\obj\Debug\CahtDLL.dll
+F:\Projects\Portal\CahtDLL\obj\Debug\CahtDLL.pdb
+F:\Projects\Portal\CahtDLL\bin\DAL.dll
+F:\Projects\Portal\CahtDLL\bin\itextsharp.dll
+F:\Projects\Portal\CahtDLL\bin\DAL.pdb
+Z:\CahtDLL\bin\CahtDLL.dll
+Z:\CahtDLL\bin\CahtDLL.pdb
+Z:\CahtDLL\bin\DAL.dll
+Z:\CahtDLL\bin\itextsharp.dll
+Z:\CahtDLL\bin\DAL.pdb
+Z:\CahtDLL\obj\Debug\CahtDLL.dll
+Z:\CahtDLL\obj\Debug\CahtDLL.pdb
+Y:\CahtDLL\bin\CahtDLL.dll
+Y:\CahtDLL\bin\CahtDLL.pdb
+Y:\CahtDLL\bin\DAL.dll
+Y:\CahtDLL\bin\itextsharp.dll
+Y:\CahtDLL\bin\DAL.pdb
+Y:\CahtDLL\bin\DAL.XmlSerializers.dll
+Y:\CahtDLL\obj\Debug\ResolveAssemblyReference.cache
+Y:\CahtDLL\obj\Debug\CahtDLL.dll
+Y:\CahtDLL\obj\Debug\CahtDLL.pdb
+Z:\CahtDLL\obj\Debug\CahtDLL.csprojResolveAssemblyReference.cache
+Z:\CahtDLL\bin\ActiveUp.Net.Common.dll
+Z:\CahtDLL\bin\ActiveUp.Net.Pop3.dll
+Z:\CahtDLL\bin\ActiveUp.Net.Imap4.dll
+F:\Projects\Portal2012\CahtDLL\bin\CahtDLL.dll
+F:\Projects\Portal2012\CahtDLL\bin\CahtDLL.pdb
+F:\Projects\Portal2012\CahtDLL\bin\DAL.dll
+F:\Projects\Portal2012\CahtDLL\bin\ActiveUp.Net.Common.dll
+F:\Projects\Portal2012\CahtDLL\bin\itextsharp.dll
+F:\Projects\Portal2012\CahtDLL\bin\ActiveUp.Net.Pop3.dll
+F:\Projects\Portal2012\CahtDLL\bin\ActiveUp.Net.Imap4.dll
+F:\Projects\Portal2012\CahtDLL\bin\DAL.pdb
+F:\Projects\Portal2012\CahtDLL\obj\Debug\CahtDLL.csprojResolveAssemblyReference.cache
+F:\Projects\Portal2012\CahtDLL\obj\Debug\CahtDLL.dll
+F:\Projects\Portal2012\CahtDLL\obj\Debug\CahtDLL.pdb
+F:\Projects\Portal2013\CahtDLL\obj\Debug\CahtDLL.csprojResolveAssemblyReference.cache
+F:\Projects\Portal2013\CahtDLL\bin\CahtDLL.dll.config
+F:\Projects\Portal2013\CahtDLL\bin\CahtDLL.dll
+F:\Projects\Portal2013\CahtDLL\bin\CahtDLL.pdb
+F:\Projects\Portal2013\CahtDLL\bin\DAL.dll
+F:\Projects\Portal2013\CahtDLL\bin\ActiveUp.Net.Common.dll
+F:\Projects\Portal2013\CahtDLL\bin\Telegram.Bot.dll
+F:\Projects\Portal2013\CahtDLL\bin\itextsharp.dll
+F:\Projects\Portal2013\CahtDLL\bin\ActiveUp.Net.Pop3.dll
+F:\Projects\Portal2013\CahtDLL\bin\ActiveUp.Net.Imap4.dll
+F:\Projects\Portal2013\CahtDLL\bin\Newtonsoft.Json.dll
+F:\Projects\Portal2013\CahtDLL\bin\System.Net.Http.Formatting.dll
+F:\Projects\Portal2013\CahtDLL\bin\DAL.pdb
+F:\Projects\Portal2013\CahtDLL\bin\Newtonsoft.Json.xml
+F:\Projects\Portal2013\CahtDLL\bin\System.Net.Http.Formatting.xml
+F:\Projects\Portal2013\CahtDLL\bin\DAL.XmlSerializers.dll
+F:\Projects\Portal2013\CahtDLL\obj\Debug\CahtDLL.dll
+F:\Projects\Portal2013\CahtDLL\obj\Debug\CahtDLL.pdb
